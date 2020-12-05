@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Feedbacck - Computer Desk">
+    <meta name="keywords" content="contact form, feedback form, ">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <title>Computer Desk - Contact</title>
+    <link rel="shortcut icon" href="3.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="text-gray-700 body-font">
+      <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+        <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" id="header0">
+          <a href="computerdesk.html"><img src="PicsArt_08-23-11.57.05.png" height="75" width="75" alt="CD"></a>
+          <span class="ml-3 text-xl">Computer Desk</span>
+        </a>
+        <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+          <a href="home.html" class="mr-5 hover:text-gray-900">Home</a>
+          <a href="about.html" class="mr-5 hover:text-gray-900">About</a>
+          <a href="videos.html" class="mr-5 hover:text-gray-900">Videos</a>
+          <a href="contact.html" class="mr-5 hover:text-gray-900">Contact</a>
+        </nav>
+        <a href="https://www.youtube.com/channel/UCEvvrQZCcph1pxSIgiynqLw" target="_blank"><button class="inline-flex items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0">Youtube Channel</a> 
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+    <style>
+      .register .nav-tabs .nav-link:hover{
+          border: none;
+      }
+      .text-align{
+          margin-top: -3%;
+          margin-bottom: -9%;
+
+          padding: 10%;
+          margin-left: 30%;
+      }
+      .form-new{
+          margin-right: 22%;
+          margin-left: 20%;
+      }
+      .register-heading{
+          margin-left: 28%;
+          margin-bottom: 10%;
+          color: #e9ecef;
+          font-size: x-large;
+      }
+      .register-heading h1{
+          margin-left: 21%;
+          margin-bottom: 10%;
+          color: #e9ecef;
+      }
+      .register{
+          background: -webkit-linear-gradient(left, #055a4f, #00c6ff);
+          margin-top: 3%;
+          padding: 3%;
+          border-radius: 2.5rem;
+      }
+      .btnSubmit
+      {
+          width: 50%;
+          border-radius: 1rem;
+          padding: 1.5%;
+          color: #fff;
+          background-color: #03612e;
+          border: none;
+          cursor: pointer;
+          margin-right: 6%;
+          color: rgb(246, 246, 252);
+          margin-top: 4%;
+      }
+</style>
+
+</head>
+<body>
+
+<div class="container register">
+      <div class="row">
+          <div class="col-md-12">
+                  <div class="tab-pane fade show active text-align form-new" id="home" role="tabpanel" aria-labelledby="home-tab">
+                      <h3 class="register-heading">Feedback</h3>
+                      <div class="row register-form">
+                          <div class="col-md-12">
+                              <form method="post" autocomplete="off" name="google-sheet">
+                                  <div class="form-group">
+                                      <input type="text" name="Name" class="form-control" placeholder="Name *" value="" required=""/>
+                                  </div>
+                                  <div class="form-group">
+                                      <input type="email" name="Email" class="form-control" placeholder="Email *" value="" required=""/>
+                                  </div>
+                                  <div class="form-group">
+                                      <input type="number" name="Phone" class="form-control" placeholder="Phone Number" value=""/>
+                                  </div>
+                                  <div class="form-group">
+                                      <input type="text" name="Message" class="form-control" placeholder="Message *" value="" required=""/>
+                                  </div>
+                                <div class="form-group">
+                                      <input type="submit" name="submit" class="btnSubmit btn-block" value="Send Feedback" />
+                                  </div>
+                              </form>
+                          </div>
+                      </div>
+                  </div>
+          </div>
+      </div>
+  </div>
+    
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbwedYUBLKyp6fVpDA0F8sLyOadZID8Jnus2h1GckINJhDYqFO0/exec'
+      const form = document.forms['google-sheet']
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => alert("Thanks for Your Feedback!"))
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <section class="text-gray-500 bg-gray-900 body-font">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-wrap -m-4 text-center">
+          <div class="p-4 sm:w-1/2 w-1/2">
+            <h2 class="title-font font-medium sm:text-4xl text-3xl text-white">9</h2>
+            <p class="leading-relaxed">Videos</p>
+          </div>
+          <div class="p-4 sm:w-1/2 w-1/2">
+            <h2 class="title-font font-medium sm:text-4xl text-3xl text-white">35+</h2>
+            <p class="leading-relaxed">Subscribes</p>
+          </div>
+        </div>
+      </div>
+    </section>
+</body>
+</html>
